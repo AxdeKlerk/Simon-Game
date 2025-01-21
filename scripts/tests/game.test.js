@@ -5,7 +5,7 @@
 const { beforeAll, test, expect, describe } = require("@jest/globals");
 //const { describe } = require("yargs");
 
-const {game, newGame} = require("../game");
+const {game, newGame, showScore} = require("../game");
 
 beforeAll (() => {
     let fs = require("fs");
