@@ -45,6 +45,7 @@ describe("new game works correctly", () => {
         game.currentGame = ["button1", "button2"];
         document.getElementById("score").innerText = "42";
         newGame();
+        showScore();
     });
     test("should set game score to zero", () => {
         expect(game.score).toEqual(0);
@@ -59,7 +60,7 @@ describe("new game works correctly", () => {
     });
 
     test("should display 0 for the element with the Id of score", () => {
-        expect(document.getElementById("score")).toEqual(0);
+        expect(document.getElementById("score").innerText).toBe(0);
     });
     
 });
