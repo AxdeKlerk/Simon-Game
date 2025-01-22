@@ -51,8 +51,8 @@ describe("new game works correctly", () => {
         expect(game.score).toEqual(0);
     });
 
-    test("should clear playerMoves array", () => {
-        expect(game.playerMoves.length).toBe(0);
+    test("should be one move in the computer's game array", () => {
+        expect(game.addTurn.length).toBe(1);
     });
 
     test("should clear currentGame array", () => {
