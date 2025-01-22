@@ -5,7 +5,7 @@
 const { beforeAll, test, expect, describe } = require("@jest/globals");
 //const { describe } = require("yargs");
 
-const {game, newGame, showScore} = require("../game");
+const {game, newGame, showScore, addTurn} = require("../game");
 
 beforeAll (() => {
     let fs = require("fs");
@@ -51,16 +51,16 @@ describe("new game works correctly", () => {
         expect(game.score).toEqual(0);
     });
 
-    test("should be one move in the computer's game array", () => {
-        expect(game.addTurn.length).toBe(1);
-    });
-
     test("should clear currentGame array", () => {
         expect(game.currentGame.length).toBe(0);
     });
 
     test("should display 0 for the element with the Id of score", () => {
         expect(document.getElementById("score").innerText).toBe(0);
+    });
+
+    test("should add one move to the computer's game array", () => {
+        expect(game.currentGame.length).toBe(1);
     });
     
 });
